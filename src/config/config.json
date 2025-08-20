@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "meu_usuario",
+    "password": "minha_senha",
+    "database": "meu_banco",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "meu_usuario",
+    "password": "minha_senha",
+    "database": "meu_banco_test",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "meu_usuario",
+    "password": "minha_senha",
+    "database": "meu_banco_prod",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  }
+}
