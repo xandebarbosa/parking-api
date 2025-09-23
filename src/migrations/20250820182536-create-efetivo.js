@@ -10,37 +10,49 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       re: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true, 
+        allowNull: false 
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false 
       },
       postoGrad: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false 
       },
       rg: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false 
       },
       cpf: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false 
       },
       opm: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false 
       },
       funcao: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false 
       },
       secao: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false 
       },
       ramal: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false 
       },
       pgu: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false 
       },
       valCnh: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE, 
+        allowNull: false 
       },
       createdAt: {
         allowNull: false,

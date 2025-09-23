@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
-const authConfig = require('../../config/auth');
+const authConfig = require('../config/auth');
 
 module.exports = async (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -13,6 +13,7 @@ module.exports = async (req, res, next) => {
   try {
     const decoded = await promisify(jwt.verify)(token, authConfig.secret);
     req.userId = decoded.id; // Adiciona o ID do usuário na requisição
+    req.userRole = decoded.role;
     return next();
   } catch (err) {
     return res.status(401).json({ error: 'Token invalid' });

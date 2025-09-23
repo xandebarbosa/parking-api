@@ -8,11 +8,16 @@ class User extends Model {
       email: DataTypes.STRING,
       password: {
         type: DataTypes.VIRTUAL,
-        allowNull: false,
       },
       password_hash: DataTypes.STRING,
+      role: {
+        type: DataTypes.STRING,
+        defaultValue: 'user', // O valor padrão que está sendo aplicado
+        allowNull: false,
+      },
     }, {
       sequelize,
+      modelName: 'User',
     });
 
     this.addHook('beforeSave', async (user) => {
@@ -24,7 +29,6 @@ class User extends Model {
     return this;
   }
 
-  // Método para verificar a senha no momento do login
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash);
   }
