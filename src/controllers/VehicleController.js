@@ -173,6 +173,21 @@ class VehicleController {
       return res.status(500).json({ error: 'Erro interno ao processar a requisição.' });
     }
   }
+
+  // Contar a quantidade total de veículos (cartões)
+  async getVehicleCount(req, res) {
+    try {
+      // O método count() do Sequelize é otimizado para contar registros.
+      const total = await Vehicle.count();
+
+      // Retorna o total em um objeto JSON.
+      return res.json({ total });
+    } catch (error) {
+      console.error("Erro ao contar os veículos:", error);
+      return res.status(500).json({ error: 'Erro interno ao contar os veículos.' });
+    }
+  }
+  
 }
 
 module.exports = new VehicleController();
