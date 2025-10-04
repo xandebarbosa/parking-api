@@ -40,7 +40,7 @@ routes.get('/vehicles', VehicleController.listAll);
 
 routes.get('/vehicles/next-card-number', VehicleController.getNextCardNumber);
 routes.post('/full-cadastro', EfetivoController.fullStore);
-routes.get('/vehicles/cout', VehicleController.getVehicleCount);
+routes.get('/vehicles/count', VehicleController.getVehicleCount);
 routes.get('/efetivos/:efetivo_id/vehicles', VehicleController.index);
 routes.post('/efetivos/:efetivo_id/vehicles', VehicleController.store);
 routes.put('/vehicles/:id', VehicleController.update);
